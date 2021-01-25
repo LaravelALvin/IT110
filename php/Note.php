@@ -96,13 +96,9 @@
 			if ($stm) {
 				$rows = $stm->fetchAll(PDO::FETCH_ASSOC);
 				echo json_encode($rows);
-			}else {
-				echo json_encode('ERROR');
 			}
 			
-			
 		} catch (Exception $e) {
-
 			throw $e;
 		}
 
@@ -116,24 +112,16 @@
 		$lastname = $_POST['data']["lastname"];
 		$password = $_POST['data']["password"];
 		$password = password_hash($password, PASSWORD_BCRYPT);
+		
 		try{
 		$pdo->beginTransaction();
 			$prepared_statement = $pdo->prepare("INSERT INTO tbl_users (username, firstname, lastname, password) VALUES (?,?,?,?)");
-			echo json_encode($username);
-			echo json_encode($firstname);
-			echo json_encode($lastname);
-			echo json_encode($password);
-
 			$prepared_statement->execute(array($username, $firstname, $lastname, $password));
-
-			echo $pdo->lastInsertId();
-
 			$pdo->commit();
 		} catch (Exception $e) {
 			$pdo->rollback();
 			throw $e;
 		}
-
 	}
 
 
@@ -146,35 +134,32 @@
 			$stmt = $con->prepare("SELECT user_id, firstname, lastname, username, password FROM tbl_users WHERE username=? LIMIT 1");
 			$stmt->bind_param('s', $username);
 			$stmt->execute();
-            $stmt->bind_result($user_ID, $firstname, $lastname, $username, $hash);
-            $stmt->store_result();
+            		$stmt->bind_result($user_ID, $firstname, $lastname, $username, $hash);
+            		$stmt->store_result();
 
-            if($stmt->num_rows == 1){
-                while($stmt->fetch()){
-                    if(password_verify($password, $hash)){
-                        $_SESSION['user_id']=$user_ID;
-                        $_SESSION['firstname']=$firstname;
-                        $_SESSION['lastname']=$lastname;
-
-                        echo json_encode('verified');
-                    }else{
-                    	echo json_encode('failed');
-                    }
+            		if($stmt->num_rows == 1){
+				while($stmt->fetch()){
+                    			if(password_verify($password, $hash)){
+						$_SESSION['user_id']=$user_ID;
+						$_SESSION['firstname']=$firstname;
+						$_SESSION['lastname']=$lastname;
+						
+                        			echo json_encode('verified');
+                    			}else{
+                    				echo json_encode('failed');
+                    			}
                     
-            	}
-            }
+            			}
+            		}
 			
 			
 		} catch (Exception $e) {
-
 			throw $e;
 		}
-
 	}
 
 	//Destroy session or LOGOUT
 	else if($_GET['action'] == 'logout'){
 		session_destroy();
-		echo json_encode( $_SESSION['user_id']);
 	}
 ?>	

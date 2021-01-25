@@ -348,8 +348,8 @@ a:hover{
 
  .signuploading{
         position: fixed;
-        left: 90px;
-        top: 50px;
+        left: 85px;
+        top: 30px;
         width: 60%;
         height: 5%;
         z-index: 9999;

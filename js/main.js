@@ -49,57 +49,52 @@ var Note = {
 					};
 
 					$.ajax({
-					type : "POST",
-					data : { data: user, action : 'ifUserExist'},
-					url : '../php/Note.php',
-					beforeSend:function(){
-						$(".loading").addClass("active");
-						
-					},
-					success : function(data){
-						$(".loading").removeClass("active");
-						Note.username = jQuery.parseJSON(data);
-						console.log(data);
-						if (!$.trim(Note.username)){
-							
-							$(".txt_error").text('Username does not exist');
+						type : "POST",
+						data : { data: user, action : 'ifUserExist'},
+						url : '../php/Note.php',
+						beforeSend:function(){
+							$(".loading").addClass("active");
 
-						}else{
-							var user = {
-								username : Note.username[0].username,
-								password : $("#txt_password").val()	
-							};
-							console.log(user);
-							$.ajax({
-							type : "POST",
-							data : { data: user, action : 'login'},
-							url : '../php/Note.php',
-							beforeSend:function(){
-								$(".loading").addClass("active");
-								
-							},
-							success : function(data){
-								$(".loading").removeClass("active");
-								var action = jQuery.parseJSON(data);
-								console.log(data);
-								if (action == "verified"){
-									window.location.href = "../index.php";
-								}else{
-									$(".txt_error").text('Incorrect Password');
-								}
+						},
+						success : function(data){
+							$(".loading").removeClass("active");
+							Note.username = jQuery.parseJSON(data);
+							if (!$.trim(Note.username)){
+								$(".txt_error").text('Username does not exist');
+
+							}else{
+								var user = {
+									username : Note.username[0].username,
+									password : $("#txt_password").val()	
+								};
+								console.log(user);
+								$.ajax({
+									type : "POST",
+									data : { data: user, action : 'login'},
+									url : '../php/Note.php',
+									beforeSend:function(){
+										$(".loading").addClass("active");
+									},
+									success : function(data){
+										$(".loading").removeClass("active");
+										var action = jQuery.parseJSON(data);
+										console.log(data);
+										if (action == "verified"){
+											window.location.href = "../index.php";
+										}else{
+											$(".txt_error").text('Incorrect Password');
+										}
+									}
+
+								});
+
 							}
 
-							});
-
 						}
-
-						
-					}
 					});
 
 				}
 
-			
 		},
 
 		/*
@@ -152,7 +147,6 @@ var Note = {
 						Note.username = jQuery.parseJSON(data);
 						console.log(data);
 						if (!$.trim(Note.username)){
-							
 							var user = {
 								username : $("#txt_username").val(),
 								firstname : $("#txt_firstname").val(),
@@ -161,23 +155,15 @@ var Note = {
 							};
 
 							$.ajax({
-							type : "POST",
-							data : { data: user, action : 'register'},
-							url : '../php/Note.php',
-							beforeSend:function(){
-								$(".signuploading").addClass("active");
-								
-							},
-							success : function(data){
-								$(".signuploading").removeClass("active");
-								var action = jQuery.parseJSON(data);
-								console.log(data);
-								// if (action == "verified"){
-								// 	window.location.href = "../index.php";
-								// }else{
-								// 	$(".txt_error").text('Incorrect Password');
-								// }
-							}
+								type : "POST",
+								data : { data: user, action : 'register'},
+								url : '../php/Note.php',
+								beforeSend:function(){
+									$(".signuploading").addClass("active");
+								},
+								success : function(data){
+									$(".signuploading").removeClass("active");
+								}
 
 							});
 

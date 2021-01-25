@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['user_id'])){
- 
+
 
 ?>
 
@@ -9,7 +9,7 @@ if(isset($_SESSION['user_id'])){
 <html>
 <head>
 	<title>My Notes</title>
- <link rel="icon" href="https://lh3.googleusercontent.com/pw/ACtC-3dwAs4wQi00Xkzyxq0tOkXexJnbRs6dprouBETxGF7eTOxhPnjs9jJtka9UU-nviZRU4SVzD7RSdCUkDsx0iHacCcAdUd1hHFu4W_VOnZdCR7e9ik15ilGwSpJQF_N450P-o5Q91FpqEJQFIUo1HEOO=w699-h697-no">
+  <link rel="icon" href="https://lh3.googleusercontent.com/pw/ACtC-3dwAs4wQi00Xkzyxq0tOkXexJnbRs6dprouBETxGF7eTOxhPnjs9jJtka9UU-nviZRU4SVzD7RSdCUkDsx0iHacCcAdUd1hHFu4W_VOnZdCR7e9ik15ilGwSpJQF_N450P-o5Q91FpqEJQFIUo1HEOO=w699-h697-no">
 	
 
   <!-- CSS -->
@@ -34,12 +34,16 @@ if(isset($_SESSION['user_id'])){
 
 </head>
 
+
 <body>
+
+
                 <!-- START OF NAVBAR! -->
 <header class="pageheader">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
    <a class="navbar-brand" href="#">
-            <link rel="icon" href="https://lh3.googleusercontent.com/pw/ACtC-3dwAs4wQi00Xkzyxq0tOkXexJnbRs6dprouBETxGF7eTOxhPnjs9jJtka9UU-nviZRU4SVzD7RSdCUkDsx0iHacCcAdUd1hHFu4W_VOnZdCR7e9ik15ilGwSpJQF_N450P-o5Q91FpqEJQFIUo1HEOO=w699-h697-no">
+                 <img src="https://lh3.googleusercontent.com/pw/ACtC-3ffOiojDxoDVeyRTP0EXxs57fVnbgegGFp7iACdQZl5vuJ3NZaIQlE31JSczCUZuNIyQKKSkAOFAEQGTRczBCPV1El1qPewEFWwDLFOH2hlW8qBPUAO6BVGvnLy5l5NL10A_4IAed3gtqv5VLTGgpb1=w150-h50-no" alt="">
+    
    
     </a>
 
@@ -51,6 +55,10 @@ if(isset($_SESSION['user_id'])){
   </nav>
 </header> 
                 <!-- END OF NAVBAR! -->  
+    <div class="overlay">
+      <div class="loading"></div> 
+    </div>
+
   	<h1 class="heading">My Notes</h1>
   	<div class="container">
   		<div class="row">

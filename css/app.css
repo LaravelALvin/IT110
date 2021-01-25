@@ -166,8 +166,38 @@ a{
     display: inline-block;
     color: red;
 
-
 }
+
+.signuploading{
+        position: fixed;
+        left: 580px;
+        top: 120px;
+        width: 50%;
+        height: 5%;
+        z-index: 9999;
+        background: url("https://lh3.googleusercontent.com/pw/ACtC-3efJKIW4pgegMBXhTReva2vsfTbvHpPp9iznTGZNQ7WJSuCwkR716WTs0F0G5XBcIKrnpOTtUzX1XEEI46O63_i7EOtg6UryF0APE_fGvjJ-af_7tHGJrX_uOgdn4h094_vFwsPH3Cn3hSBHNAxnpEL=s300-no?authuser=0") center no-repeat #fff;
+        visibility: hidden;
+}
+
+ .signuploading.active{
+     visibility: visible;
+ }
+ .loading{
+        position: fixed;
+        left: 580px;
+        top: 280px;
+        width: 50%;
+        height: 5%;
+        z-index: 9999;
+        background: url("https://lh3.googleusercontent.com/pw/ACtC-3efJKIW4pgegMBXhTReva2vsfTbvHpPp9iznTGZNQ7WJSuCwkR716WTs0F0G5XBcIKrnpOTtUzX1XEEI46O63_i7EOtg6UryF0APE_fGvjJ-af_7tHGJrX_uOgdn4h094_vFwsPH3Cn3hSBHNAxnpEL=s300-no?authuser=0") center no-repeat #fff;
+        visibility: hidden;
+       
+ }
+
+ .loading.active{
+     visibility: visible;
+ }
+
 
  .shake {
             -webkit-animation: kf_shake 0.4s 1 linear;
@@ -297,10 +327,33 @@ a:hover{
     }
 
     .login-content{
-        margin-top: -60px;
+        margin-top: -40px;
         justify-content: center;
     }
     .txt_error, .txt_success{
-        padding-bottom: 0px;
+        margin-top: -30px !important;
+        padding-bottom: 10px;
     }
+
+    .loading{
+        position: fixed;
+        left: 100px;
+        top: 210px;
+        width: 50%;
+        height: 5%;
+        z-index: 9999;
+        background: url("https://lh3.googleusercontent.com/pw/ACtC-3efJKIW4pgegMBXhTReva2vsfTbvHpPp9iznTGZNQ7WJSuCwkR716WTs0F0G5XBcIKrnpOTtUzX1XEEI46O63_i7EOtg6UryF0APE_fGvjJ-af_7tHGJrX_uOgdn4h094_vFwsPH3Cn3hSBHNAxnpEL=s300-no?authuser=0") center no-repeat #fff;
+       
+ }
+
+ .signuploading{
+        position: fixed;
+        left: 90px;
+        top: 50px;
+        width: 60%;
+        height: 5%;
+        z-index: 9999;
+        background: url("https://lh3.googleusercontent.com/pw/ACtC-3efJKIW4pgegMBXhTReva2vsfTbvHpPp9iznTGZNQ7WJSuCwkR716WTs0F0G5XBcIKrnpOTtUzX1XEEI46O63_i7EOtg6UryF0APE_fGvjJ-af_7tHGJrX_uOgdn4h094_vFwsPH3Cn3hSBHNAxnpEL=s300-no?authuser=0") center no-repeat #fff;
+       
+ }
 }

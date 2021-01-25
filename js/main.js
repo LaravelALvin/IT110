@@ -41,7 +41,7 @@ var Note = {
 				if ($("#txt_username").val() == '') {
 					$(".txt_error").text('Username must not be empty!');
 				}else if($("#txt_password").val() == ''){
-					$(".txt_error").text('Password must not be empty!');
+					$(".txt_error").text('Passowrd must not be empty!');
 				}else{
 					$(".txt_error").text('');
 					var user = {
@@ -52,8 +52,12 @@ var Note = {
 					type : "POST",
 					data : { data: user, action : 'ifUserExist'},
 					url : '../php/Note.php',
+					beforeSend:function(){
+						$(".loading").addClass("active");
+						
+					},
 					success : function(data){
-
+						$(".loading").removeClass("active");
 						Note.username = jQuery.parseJSON(data);
 						console.log(data);
 						if (!$.trim(Note.username)){
@@ -70,7 +74,12 @@ var Note = {
 							type : "POST",
 							data : { data: user, action : 'login'},
 							url : '../php/Note.php',
+							beforeSend:function(){
+								$(".loading").addClass("active");
+								
+							},
 							success : function(data){
+								$(".loading").removeClass("active");
 								var action = jQuery.parseJSON(data);
 								console.log(data);
 								if (action == "verified"){
@@ -119,10 +128,10 @@ var Note = {
 				$(".txt_error").text('Lastname must not be empty!');
 			}
 			else if($("#txt_password").val() == ''){
-				$(".txt_error").text('Password must not be empty!');
+				$(".txt_error").text('Passowrd must not be empty!');
 			}
 			else if($("#txt_confirmpassword").val() != $("#txt_password").val()){
-				$(".txt_error").text('Password does not match!');
+				$(".txt_error").text('Passowrd not match!');
 			}else{
 				$(".txt_error").text('');
 					var user = {
@@ -133,8 +142,12 @@ var Note = {
 					type : "POST",
 					data : { data: user, action : 'ifUserExist'},
 					url : '../php/Note.php',
+					beforeSend:function(){
+						$(".signuploading").addClass("active");
+						
+					},
 					success : function(data){
-
+						$(".signuploading").removeClass("active");
 						Note.username = jQuery.parseJSON(data);
 						console.log(data);
 						if (!$.trim(Note.username)){
@@ -150,7 +163,12 @@ var Note = {
 							type : "POST",
 							data : { data: user, action : 'register'},
 							url : '../php/Note.php',
+							beforeSend:function(){
+								$(".signuploading").addClass("active");
+								
+							},
 							success : function(data){
+								$(".signuploading").removeClass("active");
 								var action = jQuery.parseJSON(data);
 								console.log(data);
 								// if (action == "verified"){
@@ -164,7 +182,7 @@ var Note = {
 
 							$(".txt_success").text('Succesfully Registered!');
 						}else{
-							$(".txt_error").text('Username already exist');
+							$(".txt_error").text('Username already not exist');
 							
 
 						}

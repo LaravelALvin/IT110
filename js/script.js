@@ -37,9 +37,9 @@ var user = "";
 					$(".notes_list").empty();
 					$.each(Note.list, function(index, value){
 							let new_date = value.created_at;
-								if(value.updated_at != "0000-00-00 00:00:00"){
-									new_date = value.updated_at;
-									//console.log("create at: ",new_date);
+								iif(value.updated_at != null){	
+									new_date = 'Updated on : ' + value.updated_at;
+									
 								}
 									$(".notes_list").append("<li class=\"note\"><div class=\"card\">"
 							           +"<div class=\"card-header\">"+value.title

@@ -41,7 +41,7 @@ var Note = {
 				if ($("#txt_username").val() == '') {
 					$(".txt_error").text('Username must not be empty!');
 				}else if($("#txt_password").val() == ''){
-					$(".txt_error").text('Passowrd must not be empty!');
+					$(".txt_error").text('Password must not be empty!');
 				}else{
 					$(".txt_error").text('');
 					var user = {
@@ -128,10 +128,10 @@ var Note = {
 				$(".txt_error").text('Lastname must not be empty!');
 			}
 			else if($("#txt_password").val() == ''){
-				$(".txt_error").text('Passowrd must not be empty!');
+				$(".txt_error").text('Password must not be empty!');
 			}
 			else if($("#txt_confirmpassword").val() != $("#txt_password").val()){
-				$(".txt_error").text('Passowrd not match!');
+				$(".txt_error").text('Password does not match!');
 			}else{
 				$(".txt_error").text('');
 					var user = {
@@ -182,7 +182,7 @@ var Note = {
 
 							$(".txt_success").text('Succesfully Registered!');
 						}else{
-							$(".txt_error").text('Username already not exist');
+							$(".txt_error").text('Username already exist');
 							
 
 						}

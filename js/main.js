@@ -118,6 +118,7 @@ var Note = {
 		*/
 
 		register: function(){
+			$(".txt_success").text('');
 			if ($("#txt_username").val() == '') {
 				$(".txt_error").text('Username must not be empty!');
 			}
@@ -181,6 +182,11 @@ var Note = {
 							});
 
 							$(".txt_success").text('Succesfully Registered!');
+							$("#txt_username").val('');
+							$("#txt_firstname").val('');
+							$("#txt_lastname").val('');
+							$("#txt_password").val('');
+							$("#txt_confirmpassword").val('');
 						}else{
 							$(".txt_error").text('Username already exist');
 							

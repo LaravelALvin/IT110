@@ -31,6 +31,7 @@
                 <h2 class="title">Sign Up</h2>
     
             <p class=" txt_error "> </p>
+            <div class="signuploading"></div> 
               <p class="txt_success">  </p>
                                                                  
                 <div class="input-div one">

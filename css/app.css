@@ -337,8 +337,8 @@ a:hover{
 
     .loading{
         position: fixed;
-        left: 95px;
-        top: 190px;
+        left: 90px;
+        top: 240px;
         width: 50%;
         height: 4%;
         z-index: 9999;

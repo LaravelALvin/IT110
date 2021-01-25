@@ -37,7 +37,7 @@ var user = "";
 					$(".notes_list").empty();
 					$.each(Note.list, function(index, value){
 							let new_date = value.created_at;
-								iif(value.updated_at != null){	
+								if(value.updated_at != null){	
 									new_date = 'Updated on : ' + value.updated_at;
 									
 								}

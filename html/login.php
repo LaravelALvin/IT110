@@ -23,46 +23,55 @@ date_default_timezone_set('Asia/Manila');
     crossorigin="anonymous">
   </script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    
+  
+  <script>   
+        function loaded(){
+            $(".se-pre-con").fadeOut("slow");
+        }
+
+    </script>
 </head>
-<body>
-     <img class="wave" src="https://lh3.googleusercontent.com/pw/ACtC-3c_JxUlKl01SIqfGisMFnLYVGrDwVl3PcGbAcKrFQ7TOVadTwesBaF9QVBi609EV9M7eCCfmcnHjbw_MXDZn8b_rmVrR6jazOm2wpXaRcWB5PaFan9zKqdYNq878GybjlLaaYLISdZ-0HW-R_VhqSaR=w574-h697-no">
-     <div class="container">
-        <div class="img">
-         <img src="https://lh3.googleusercontent.com/pw/ACtC-3ft5TL-Gepf2mIz7uE5bthM0O4FrdQr8NcJNkknHze8bIH8BMycGsNBLqbeFxy6N5yNm5Msfgpx0DnQRKgdVqEZ7SHmhabJw6anUEym9s8GALAquKVhimA7VCf275Wism1MYEKzG0CNFmaF4P812Xed=w838-h697-no">
-       </div>
-        <div class="login-content">
-            <form id="loginform" class="form-horizontal" role="form">
-               <img src="https://lh3.googleusercontent.com/pw/ACtC-3c-mRMtkuBdOlKb2uOoAWJbdI5HV73ehiLDDrffH1OzaOf68FqRrvZFjmBEe04MXdXVY0Tdfy-VQ2XvGOi81TbOSqsUpmqtAaOJVaJTcXiRG-PYp3RGea7mb2AbikO2PQ2Vn1RDzLW6z9-33FpIzQ9q=s697-no">
-                 <h2 class="title">Welcome</h2>           
-               <p class=" txt_error "> </p>
-                                                                             
-                <div class="input-div one">
-                   <div class="i">
-                        <i class="fas fa-user"></i>
-                   </div>
-                   <div class="div">
-                        <h5>Username</h5>
-                        <input type="text" class="input" name="username" id="txt_username">
-                   </div>
-                </div>
-                <div class="input-div pass">
-                   <div class="i"> 
-                        <i class="fas fa-lock"></i>
-                   </div>
-                   <div class="div">
-                        <h5>Password</h5>
-                        <input type="password" class="input" name="password" id="txt_password">
-                   </div>
-                </div>
-                <a href="#">Forgot Password?</a>
-                <!-- <input type="submit" class="btn" value="Login" name="Login"> -->
-                <button type="button" class="btn btn-primary" id="btn_login">Login</button>
-                <p class="txt_signup"> New User? <a class="txt_signup" href="signup.php">Sign up here.</a> </p>
-                
-            </form>
-        </div>
-    </div>
+<body onload="loaded()">
+  <div class="se-pre-con"></div>
+ 
+       <img class="wave" src="https://lh3.googleusercontent.com/pw/ACtC-3c_JxUlKl01SIqfGisMFnLYVGrDwVl3PcGbAcKrFQ7TOVadTwesBaF9QVBi609EV9M7eCCfmcnHjbw_MXDZn8b_rmVrR6jazOm2wpXaRcWB5PaFan9zKqdYNq878GybjlLaaYLISdZ-0HW-R_VhqSaR=w574-h697-no">
+       <div class="container ">
+          <div class="img">
+           <img src="https://lh3.googleusercontent.com/pw/ACtC-3ft5TL-Gepf2mIz7uE5bthM0O4FrdQr8NcJNkknHze8bIH8BMycGsNBLqbeFxy6N5yNm5Msfgpx0DnQRKgdVqEZ7SHmhabJw6anUEym9s8GALAquKVhimA7VCf275Wism1MYEKzG0CNFmaF4P812Xed=w838-h697-no">
+         </div>
+          <div class="login-content">
+              <form id="loginform" class="form-horizontal" role="form">
+                 <img src="https://lh3.googleusercontent.com/pw/ACtC-3c-mRMtkuBdOlKb2uOoAWJbdI5HV73ehiLDDrffH1OzaOf68FqRrvZFjmBEe04MXdXVY0Tdfy-VQ2XvGOi81TbOSqsUpmqtAaOJVaJTcXiRG-PYp3RGea7mb2AbikO2PQ2Vn1RDzLW6z9-33FpIzQ9q=s697-no">
+                   <h2 class="title">Welcome</h2>           
+                 <p class=" txt_error "> </p>
+                                                                               
+                  <div class="input-div one">
+                     <div class="i">
+                          <i class="fas fa-user"></i>
+                     </div>
+                     <div class="div">
+                          <h5>Username</h5>
+                          <input type="text" class="input" name="username" id="txt_username">
+                     </div>
+                  </div>
+                  <div class="input-div pass">
+                     <div class="i"> 
+                          <i class="fas fa-lock"></i>
+                     </div>
+                     <div class="div">
+                          <h5>Password</h5>
+                          <input type="password" class="input" name="password" id="txt_password">
+                     </div>
+                  </div>
+                  <a href="#">Forgot Password?</a>
+                  <!-- <input type="submit" class="btn" value="Login" name="Login"> -->
+                  <button type="button" class="btn btn-primary" id="btn_login">Login</button>
+                  <p class="txt_signup"> New User? <a class="txt_signup" href="signup.php">Sign up here.</a> </p>
+                  
+              </form>
+          </div>
+      </div>
+
     <script type="text/javascript" src="../js/main.js"></script>
 
 </body>

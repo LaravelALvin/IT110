@@ -9,7 +9,7 @@ if(isset($_SESSION['user_id'])){
 <html>
 <head>
 	<title>My Notes</title>
- <link rel="icon" href="img/icon.png">
+ <link rel="icon" href="https://lh3.googleusercontent.com/pw/ACtC-3dwAs4wQi00Xkzyxq0tOkXexJnbRs6dprouBETxGF7eTOxhPnjs9jJtka9UU-nviZRU4SVzD7RSdCUkDsx0iHacCcAdUd1hHFu4W_VOnZdCR7e9ik15ilGwSpJQF_N450P-o5Q91FpqEJQFIUo1HEOO=w699-h697-no">
 	
 
   <!-- CSS -->

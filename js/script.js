@@ -12,7 +12,12 @@ var user = "";
 				type : "POST",
 				data : { data: new_note, action : 'add_note'},
 				url : 'php/Note.php',
+				beforeSend:function(){
+					$("#addNoteModal").modal("hide");
+					$(".overlay").addClass("active");		
+				},
 				success : function(data){
+					$(".overlay").removeClass("active");
 					Note.get(user);
 					$("#addNoteModal").modal("hide");
 					$("#note-title").val("");
@@ -61,7 +66,12 @@ var user = "";
 				type:"POST",
 				data: {id:note_id,action:'delete_note'},
 				url: 'php/Note.php',
+				beforeSend:function(){
+					$("#confirm-delete").modal("hide");
+					$(".overlay").addClass("active");		
+				},
 				success:function(data){
+					$(".overlay").removeClass("active");
 					Note.get(user);
 				}
 			});
@@ -90,7 +100,13 @@ var user = "";
 					type:"POST",
 					data: {data:edited_note,action:'edit_note'},
 					url: 'php/Note.php',
+					beforeSend:function(){
+					$("#editNoteModal").modal("hide");
+					$("#confirm-edit").modal("hide");
+					$(".overlay").addClass("active");		
+				},
 					success:function(data){
+						$(".overlay").removeClass("active");
 						Note.get(user);
 						$("#editNoteModal").modal("hide");
 						$("#confirm-edit").modal("hide");

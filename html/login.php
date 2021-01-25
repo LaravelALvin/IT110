@@ -33,7 +33,7 @@ date_default_timezone_set('Asia/Manila');
 </head>
 <body onload="loaded()">
   <div class="se-pre-con"></div>
- 
+  
        <img class="wave" src="https://lh3.googleusercontent.com/pw/ACtC-3c_JxUlKl01SIqfGisMFnLYVGrDwVl3PcGbAcKrFQ7TOVadTwesBaF9QVBi609EV9M7eCCfmcnHjbw_MXDZn8b_rmVrR6jazOm2wpXaRcWB5PaFan9zKqdYNq878GybjlLaaYLISdZ-0HW-R_VhqSaR=w574-h697-no">
        <div class="container ">
           <div class="img">
@@ -44,7 +44,7 @@ date_default_timezone_set('Asia/Manila');
                  <img src="https://lh3.googleusercontent.com/pw/ACtC-3c-mRMtkuBdOlKb2uOoAWJbdI5HV73ehiLDDrffH1OzaOf68FqRrvZFjmBEe04MXdXVY0Tdfy-VQ2XvGOi81TbOSqsUpmqtAaOJVaJTcXiRG-PYp3RGea7mb2AbikO2PQ2Vn1RDzLW6z9-33FpIzQ9q=s697-no">
                    <h2 class="title">Welcome</h2>           
                  <p class=" txt_error "> </p>
-                                                                               
+                   <div class="loading"></div>                                                            
                   <div class="input-div one">
                      <div class="i">
                           <i class="fas fa-user"></i>

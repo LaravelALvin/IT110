@@ -1,8 +1,8 @@
-
+const inputs = document.querySelectorAll(".input");
 $(document).ready(function(){
 
 //Input line Animation check if input value is not empty
-const inputs = document.querySelectorAll(".input");
+
 	function addcl(){
 		let parent = this.parentNode.parentNode;
 		parent.classList.add("focus");

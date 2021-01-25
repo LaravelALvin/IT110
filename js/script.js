@@ -39,7 +39,7 @@ var user = "";
 							let new_date = value.created_at;
 								if(value.updated_at != null){	
 									new_date = 'Updated on : ' + value.updated_at;
-									
+									//console.log("create at: ",new_date);
 								}
 									$(".notes_list").append("<li class=\"note\"><div class=\"card\">"
 							           +"<div class=\"card-header\">"+value.title

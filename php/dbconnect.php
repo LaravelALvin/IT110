@@ -1,4 +1,7 @@
 <?php
+
+	date_default_timezone_set('Asia/Manila');
+
 	$dsn = "mysql:host=remotemysql.com:3306;dbname=MK2DS7ujfG";
 	$user = "MK2DS7ujfG";
 	$password = "qJYTfC82iQ";

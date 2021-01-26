@@ -1,3 +1,9 @@
+<?php
+date_default_timezone_set('Asia/Manila');
+session_start();
+if(!isset($_SESSION['user_id'])){
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,3 +94,13 @@
      <script type="text/javascript" src="../js/main.js"></script>
 </body>
 </html>
+
+<?php
+}
+else
+{
+    header("location:../index.php");
+    
+}
+
+?>

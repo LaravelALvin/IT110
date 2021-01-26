@@ -3,7 +3,7 @@
 
 	$dsn = "mysql:host=remotemysql.com:3306;dbname=MK2DS7ujfG";
 	$user = "MK2DS7ujfG";
-	$password = "qJYTfC82iQ";
+	$password = "f3GsAffDKQ";
 
 
 	$pdo = new PDO($dsn, $user, $password);
@@ -15,7 +15,7 @@
 
 	$servername = "remotemysql.com";
     $username = "MK2DS7ujfG";
-    $password = "qJYTfC82iQ";
+    $password = "f3GsAffDKQ";
     $database = "MK2DS7ujfG";
     $port = "3306";
     $con=mysqli_connect($servername, $username, $password, $database);

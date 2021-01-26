@@ -13,11 +13,11 @@
 			
 			///pdo
 			$pdo->beginTransaction();
-			$prepared_statement = $pdo->prepare("INSERT INTO tbl_notes (title, description, user_id, status) VALUES (?,?,?,?)");
+			$prepared_statement = $pdo->prepare("INSERT INTO tbl_notes (title, description, user_id, status, create_at) VALUES (?,?,?,?,?)");
 			echo json_encode($name);
 			echo json_encode($description);
 
-			$prepared_statement->execute(array($name, $description, $user_id, true));
+			$prepared_statement->execute(array($name, $description, $user_id, true, date("Y-m-d H:i:s", now());));
 
 			echo $pdo->lastInsertId();
 

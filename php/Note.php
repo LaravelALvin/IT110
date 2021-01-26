@@ -7,17 +7,18 @@
 	// Insert note into the database 
 	if($_POST['action'] == 'add_note'){
 		$user_id =$_SESSION['user_id'];
+		$date = date("Y-m-d H:i:s"); 
 		try {
 			$name = $_POST['data']["name"];
 			$description = $_POST['data']["description"];
 			
 			///pdo
 			$pdo->beginTransaction();
-			$prepared_statement = $pdo->prepare("INSERT INTO tbl_notes (title, description, user_id, status, create_at) VALUES (?,?,?,?,?)");
+			$prepared_statement = $pdo->prepare("INSERT INTO tbl_notes (title, description, user_id, status, created_at) VALUES (?,?,?,?,?)");
 			echo json_encode($name);
 			echo json_encode($description);
 
-			$prepared_statement->execute(array($name, $description, $user_id, true, date("Y-m-d H:i:s", now());));
+			$prepared_statement->execute(array($name, $description, $user_id, true, $date);
 
 			echo $pdo->lastInsertId();
 

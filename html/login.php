@@ -9,7 +9,8 @@ if(!isset($_SESSION['user_id'])){
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sign in - My Notes</title>
-    <link rel="icon" href="../img/icon.png">
+     <link rel="icon" href="https://lh3.googleusercontent.com/pw/ACtC-3dwAs4wQi00Xkzyxq0tOkXexJnbRs6dprouBETxGF7eTOxhPnjs9jJtka9UU-nviZRU4SVzD7RSdCUkDsx0iHacCcAdUd1hHFu4W_VOnZdCR7e9ik15ilGwSpJQF_N450P-o5Q91FpqEJQFIUo1HEOO=w699-h697-no">
+
     <link rel="stylesheet" type="text/css" href="../css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
